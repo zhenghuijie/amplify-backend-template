@@ -10,7 +10,7 @@ const schema = a.schema({
   Todo: a
     .model({
       content: a.string(),
-    })
+    }),
   User: a
     .model({
       Username: a.string(),

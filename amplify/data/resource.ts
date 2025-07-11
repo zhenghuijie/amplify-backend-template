@@ -11,6 +11,13 @@ const schema = a.schema({
     .model({
       content: a.string(),
     })
+  User: a
+    .model({
+      Username: a.string(),
+      ProfilePhotoUrl: a.string(),
+      isProfileComplete: a.boolean(),
+      email: a.string(),
+    })
     .authorization((allow) => [allow.publicApiKey()]),
 });
 

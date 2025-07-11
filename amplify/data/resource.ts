@@ -24,7 +24,7 @@ const schema = a.schema({
     .model({
       messageTxt: a.string(),
       fromid: a.string(),
-      toid: a.boolean(),
+      toid: a.string(),
       timestamp: a.string(),
       readReceipt: a.string(),
     })
@@ -33,7 +33,7 @@ const schema = a.schema({
     .model({
       messageTxt: a.string(),
       fromid: a.string(),
-      toid: a.boolean(),
+      toid: a.string(),
       timestamp: a.integer(),
       readReceipt: a.string(),
       hasImage: a.boolean(),

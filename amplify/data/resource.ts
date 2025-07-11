@@ -20,6 +20,26 @@ const schema = a.schema({
       email: a.string(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
+  LatestMessage: a
+    .model({
+      messageTxt: a.string(),
+      fromid: a.string(),
+      toid: a.boolean(),
+      timestamp: a.string(),
+      readReceipt: a.string(),
+    })
+    .authorization((allow) => [allow.publicApiKey()]),
+  ChatMessage: a
+    .model({
+      messageTxt: a.string(),
+      fromid: a.string(),
+      toid: a.boolean(),
+      timestamp: a.integer(),
+      readReceipt: a.string(),
+      hasImage: a.boolean(),
+      imageUrl: a.string(),
+    })
+    .authorization((allow) => [allow.publicApiKey()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
